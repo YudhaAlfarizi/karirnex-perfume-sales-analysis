@@ -20,7 +20,7 @@ Proyek ini adalah mini project dari **Bootcamp Data Analyst Karirnex** (2-12 Nov
 
 Pertanyaan utamanya: **berapa omzet bersih toko, dari channel dan segmen mana asalnya, dan apakah promo tanggal 25 di Live Toktok layak diteruskan?**
 
-![Dashboard Penjualan](dashboard/dashboard_penjualan.png)
+![Dashboard Penjualan](assets/dashboard_penjualan.png)
 
 > 📝 Data berupa **dataset dummy** dari bootcamp. Dataset tidak disertakan di repositori ini.
 
@@ -60,7 +60,7 @@ Detail lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo
 
 ## 🔍 Studi Kasus: Promo Tanggal 25 (Live Toktok)
 
-![Evaluasi Promo](dashboard/images/evaluasi_promo_tgl25.png)
+![Evaluasi Promo](assets/evaluasi_promo_tgl25.png)
 
 | Metrik | Tgl 25 | Hari lain |
 |---|---:|---:|
@@ -71,6 +71,17 @@ Detail lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo
 Kenaikan alami hari tgl 25 di channel lain sekitar **1,7x**, sedangkan Live Toktok naik **5,5x**. Setelah kenaikan alami dikeluarkan, promo masih menambah sekitar **Rp100 jt** revenue dengan **biaya diskon Rp17,2 jt**.
 
 **Rekomendasi:** teruskan promo, tetapi cek margin kotor ke owner karena rata-rata nilai pesanan turun dan margin belum diketahui.
+
+---
+
+## 📊 Dashboard
+
+Dashboard dibuat di **Looker Studio**: [buka dashboard interaktif](GANTI_DENGAN_LINK_LOOKER_STUDIO).
+
+- **Halaman 1, Dashboard Penjualan:** kartu KPI (Revenue bersih Rp8,39 M, Order masuk 10 rb, Quantity 12,13 rb, Nilai per pesanan Rp914,47 rb), revenue dan order per bulan, revenue per gender dan channel, scatter harga x pcs terjual, serta tabel revenue per channel per bulan. Filter: brand, channel, nama wangi, pembayaran, gender, status, dan rentang tanggal.
+- **Halaman 2, Evaluasi Promo Tanggal 25:** lihat studi kasus di atas.
+
+> Catatan: Revenue bersih dihitung dari status Selesai, sedangkan Quantity dan Order masuk memuat semua status.
 
 ---
 
@@ -96,7 +107,7 @@ Penjelasan tiap kolom ada di [`data/data_dictionary.md`](data/data_dictionary.md
 | Analisis awal | Microsoft Excel (PivotTable) | [`excel/`](excel/) |
 | Query data | Google BigQuery (SQL) | [`sql/`](sql/) |
 | Eksplorasi dan visualisasi | Python (pandas, matplotlib) di Google Colab | [`notebook/`](notebook/) |
-| Dashboard | Looker Studio | [`dashboard/`](dashboard/) |
+| Dashboard | Looker Studio | [Link dashboard](GANTI_DENGAN_LINK_LOOKER_STUDIO) · [`assets/`](assets/) |
 
 ---
 
@@ -106,6 +117,9 @@ Penjelasan tiap kolom ada di [`data/data_dictionary.md`](data/data_dictionary.md
 karirnex-perfume-sales-analysis/
 ├── README.md
 ├── .gitignore
+├── assets/
+│   ├── dashboard_penjualan.png
+│   └── evaluasi_promo_tgl25.png
 ├── data/
 │   └── data_dictionary.md
 ├── excel/
@@ -114,11 +128,6 @@ karirnex-perfume-sales-analysis/
 │   └── queries_bigquery.sql
 ├── notebook/
 │   └── analisis_penjualan.ipynb
-├── dashboard/
-│   ├── README.md
-│   └── images/
-│       ├── dashboard_penjualan.png
-│       └── evaluasi_promo_tgl25.png
 └── docs/
     └── studi_kasus_promo_tgl25.md
 ```
