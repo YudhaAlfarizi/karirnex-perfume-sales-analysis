@@ -62,7 +62,6 @@ Dashboard interaktif: [Looker Studio](GANTI_DENGAN_LINK_LOOKER_STUDIO)
 
 ---
 
-## 🔍 Analisis per Chart
 
 ### Pesanan per Hari: Tanggal 25 vs Hari Lain
 
@@ -125,7 +124,6 @@ Metode lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo
 
 Penjelasan tiap kolom ada di [`data/data_dictionary.md`](data/data_dictionary.md).
 
-> **Catatan basis hitung:** Net sales, AOV, dan persentase di atas dihitung dari status **Selesai**. Beberapa visual dashboard (Quantity, scatter harga x unit) memuat semua status.
 
 ---
 
@@ -173,8 +171,6 @@ karirnex-perfume-sales-analysis/
 2. Lihat langkah Excel di [`excel/langkah_pivottable.md`](excel/langkah_pivottable.md).
 3. Baca query di [`sql/queries_bigquery.sql`](sql/queries_bigquery.sql).
 4. Buka notebook di [`notebook/`](notebook/) (tampil langsung di GitHub).
-
-Dataset tidak tersedia, jadi notebook dan query tidak bisa dijalankan ulang. Hasilnya dapat dilihat dari output yang tersimpan.
 
 ---
 
