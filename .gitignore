@@ -1,0 +1,7 @@
+# Dataset & file mentah tidak diunggah
+*.csv
+*.xlsx
+*.xls
+*.pptx
+.ipynb_checkpoints/
+.DS_Store
