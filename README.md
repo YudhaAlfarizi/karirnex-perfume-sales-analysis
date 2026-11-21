@@ -185,6 +185,6 @@ karirnex-perfume-sales-analysis/
 
 ## 👤 Penulis
 
-**Yudha Alfarizi**:  [LinkedIn]((https://lnkd.in/p/givgtC-W))
+**Yudha Alfarizi**:  [LinkedIn](https://lnkd.in/p/givgtC-W)
 
 Penyelenggara bootcamp: **Karirnex**
