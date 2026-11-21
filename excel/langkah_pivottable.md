@@ -1,5 +1,5 @@
 # Analisis Excel (PivotTable)
-[soal dan hasil ada dilinked](https://lnkd.in/p/givgtC-W)
+## [soal dan hasil ada dilinked](https://lnkd.in/p/givgtC-W)
 
 ## 1. Seberapa besar order retur, dibatalkan, dan Gross sales?
 **Langkah:** PivotTable, Rows = `status`, Values = Count of `order_id` dan Sum of `total_sales`.
