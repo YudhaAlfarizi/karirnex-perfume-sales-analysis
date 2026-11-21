@@ -1,5 +1,6 @@
 -- ============================================================
 -- Analisis Penjualan Toko Parfum Karirnex 2025 (Google BigQuery)
+https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1sdatawithyudha!2sasia-southeast2!3s82672e1b-3cd6-4163-9bb7-fa5f725f8ccb!2e1
 -- ============================================================
 
 -- 1. Berapa transaksi pada bulan Desember 2025?
