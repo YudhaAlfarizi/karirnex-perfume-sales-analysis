@@ -28,7 +28,7 @@ Pertanyaan utamanya: **berapa omzet bersih toko, dari channel dan produk mana as
 
 ![Evaluasi Promo](assets/evaluasi_promo_tgl25.png)
 
-Dashboard interaktif: [Looker Studio](GANTI_DENGAN_LINK_LOOKER_STUDIO)
+Dashboard interaktif: [Looker Studio](https://datastudio.google.com/reporting/12e20ef4-9d25-4099-a034-af7f4a2e588e)
 
 > 📝 Data berupa **dataset dummy** dari bootcamp. Dataset tidak disertakan di repositori ini.
 
