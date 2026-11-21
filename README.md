@@ -18,9 +18,17 @@
 
 Proyek ini adalah mini project dari **Bootcamp Data Analyst Karirnex** (2-12 November 2026). Analisis dikerjakan dengan empat tools: **Excel**, **Google BigQuery (SQL)**, **Python (Google Colab)**, dan **Looker Studio**.
 
-Pertanyaan utamanya: **berapa omzet bersih toko, dari channel dan segmen mana asalnya, dan apakah promo tanggal 25 di Live Toktok layak diteruskan?**
+Pertanyaan utamanya: **berapa omzet bersih toko, dari channel dan produk mana asalnya, dan apakah promo tanggal 25 di Live Toktok layak diteruskan?**
+
+**Dashboard 1: Penjualan**
 
 ![Dashboard Penjualan](assets/dashboard_penjualan.png)
+
+**Dashboard 2: Evaluasi Promo Tanggal 25**
+
+![Evaluasi Promo](assets/evaluasi_promo_tgl25.png)
+
+Dashboard interaktif: [Looker Studio](GANTI_DENGAN_LINK_LOOKER_STUDIO)
 
 > 📝 Data berupa **dataset dummy** dari bootcamp. Dataset tidak disertakan di repositori ini.
 
@@ -52,15 +60,43 @@ Pertanyaan utamanya: **berapa omzet bersih toko, dari channel dan segmen mana as
 
 **3. Offline - Toko Karirnex adalah channel terbesar**, dengan 33,85% Net sales (Rp2,84 M), lebih dari dua kali lipat channel kedua (Website Karirnex, 15,78%). Risikonya: sepertiga omzet bergantung pada satu toko fisik.
 
-**4. Promo tanggal 25 di Live Toktok berhasil** (lihat studi kasus di bawah).
+---
 
-Detail lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo_tgl25.md).
+## 🔍 Analisis per Chart
+
+### Pesanan per Hari: Tanggal 25 vs Hari Lain
+
+![Pesanan per hari tanggal 25 vs hari lain](assets/chart_pesanan_tgl25_vs_hari_lain.png)
+
+**1. Live Toktok naik paling tinggi pada tanggal 25.** Pesanan per hari melonjak dari 3,1 menjadi 16,8 (**5,5x**). Channel lain juga naik pada tanggal 25, tetapi hanya 1,5x sampai 2,0x (Offline 1,7x, Toko Biru 2,0x, Website 1,8x, Toko Hijau 1,6x, Instaria 1,5x). Kenaikan alami ini yang harus dikeluarkan sebelum menilai efek promo.
+
+---
+
+### Pola Pesanan Live Toktok per Tanggal
+
+![Rata-rata pesanan Live Toktok per tanggal](assets/chart_pesanan_per_tanggal.png)
+
+**2. Lonjakan hanya terjadi di tanggal 25.** Di tanggal lain, rata-rata pesanan Live Toktok berkisar 1,8 sampai 4,8 per hari, sedangkan tanggal 25 mencapai 16,8. Tidak ada tanggal lain yang mendekati, sehingga lonjakan ini bukan pola musiman bulanan.
+
+---
+
+### Revenue Bersih per Konsentrasi dan Channel
+
+![Revenue bersih per konsentrasi](assets/chart_revenue_konsentrasi_channel.png)
+
+**3. EDP dan EDT menguasai penjualan.** EDP menyumbang 56,66% dan EDT 35,17% dari Net sales (total 91,8%), sedangkan Cologne, Body Mist, dan Extrait masing-masing di bawah 5%. Komposisinya mirip di semua channel (EDP 53% sampai 59%), jadi selera konsentrasi tidak bergantung pada channel.
+
+---
+
+### Harga Rata-rata vs Unit Terjual per Produk
+
+![Scatter harga rata-rata vs unit terjual](assets/chart_scatter_harga_qty.png)
+
+**4. Brand sendiri, Karirnex Parfums, laku dalam jumlah tetapi murah.** Tujuh produknya berharga rata-rata sekitar Rp226 rb, jauh di bawah brand lain (sekitar Rp1,03 jt). Hasilnya, brand ini menyumbang **20,2% unit** terjual tetapi hanya **6,0% Net sales**. Brand lain bernilai tinggi tetapi unit per produk lebih sedikit.
 
 ---
 
 ## 🔍 Studi Kasus: Promo Tanggal 25 (Live Toktok)
-
-![Evaluasi Promo](assets/evaluasi_promo_tgl25.png)
 
 | Metrik | Tgl 25 | Hari lain |
 |---|---:|---:|
@@ -68,20 +104,11 @@ Detail lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo
 | Revenue bersih per hari | Rp13,1 jt | Rp2,8 jt |
 | Rata-rata nilai pesanan | Rp779 rb | Rp908 rb (turun 14,1%) |
 
-Kenaikan alami hari tgl 25 di channel lain sekitar **1,7x**, sedangkan Live Toktok naik **5,5x**. Setelah kenaikan alami dikeluarkan, promo masih menambah sekitar **Rp100 jt** revenue dengan **biaya diskon Rp17,2 jt**.
+Kenaikan alami channel lain sekitar **1,7x**, sedangkan Live Toktok naik **5,5x**. Setelah kenaikan alami dikeluarkan, promo masih menambah sekitar **Rp100 jt** revenue dengan **biaya diskon Rp17,2 jt**.
 
 **Rekomendasi:** teruskan promo, tetapi cek margin kotor ke owner karena rata-rata nilai pesanan turun dan margin belum diketahui.
 
----
-
-## 📊 Dashboard
-
-Dashboard dibuat di **Looker Studio**: [buka dashboard interaktif](GANTI_DENGAN_LINK_LOOKER_STUDIO).
-
-- **Halaman 1, Dashboard Penjualan:** kartu KPI (Revenue bersih Rp8,39 M, Order masuk 10 rb, Quantity 12,13 rb, Nilai per pesanan Rp914,47 rb), revenue dan order per bulan, revenue per gender dan channel, scatter harga x pcs terjual, serta tabel revenue per channel per bulan. Filter: brand, channel, nama wangi, pembayaran, gender, status, dan rentang tanggal.
-- **Halaman 2, Evaluasi Promo Tanggal 25:** lihat studi kasus di atas.
-
-> Catatan: Revenue bersih dihitung dari status Selesai, sedangkan Quantity dan Order masuk memuat semua status.
+Metode lengkap ada di [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo_tgl25.md).
 
 ---
 
@@ -97,6 +124,8 @@ Dashboard dibuat di **Looker Studio**: [buka dashboard interaktif](GANTI_DENGAN_
 | Kualitas | Tanpa missing value dan tanpa duplikat |
 
 Penjelasan tiap kolom ada di [`data/data_dictionary.md`](data/data_dictionary.md).
+
+> **Catatan basis hitung:** Net sales, AOV, dan persentase di atas dihitung dari status **Selesai**. Beberapa visual dashboard (Quantity, scatter harga x unit) memuat semua status.
 
 ---
 
@@ -119,7 +148,11 @@ karirnex-perfume-sales-analysis/
 ├── .gitignore
 ├── assets/
 │   ├── dashboard_penjualan.png
-│   └── evaluasi_promo_tgl25.png
+│   ├── evaluasi_promo_tgl25.png
+│   ├── chart_pesanan_tgl25_vs_hari_lain.png
+│   ├── chart_pesanan_per_tanggal.png
+│   ├── chart_revenue_konsentrasi_channel.png
+│   └── chart_scatter_harga_qty.png
 ├── data/
 │   └── data_dictionary.md
 ├── excel/
@@ -136,11 +169,10 @@ karirnex-perfume-sales-analysis/
 
 ## 🚀 Cara Membaca
 
-1. Mulai dari ringkasan di atas, lalu buka [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo_tgl25.md).
+1. Mulai dari ringkasan dan analisis per chart di atas, lalu buka [`docs/studi_kasus_promo_tgl25.md`](docs/studi_kasus_promo_tgl25.md).
 2. Lihat langkah Excel di [`excel/langkah_pivottable.md`](excel/langkah_pivottable.md).
 3. Baca query di [`sql/queries_bigquery.sql`](sql/queries_bigquery.sql).
 4. Buka notebook di [`notebook/`](notebook/) (tampil langsung di GitHub).
-5. Lihat dashboard interaktif: [Looker Studio](GANTI_DENGAN_LINK_LOOKER_STUDIO).
 
 Dataset tidak tersedia, jadi notebook dan query tidak bisa dijalankan ulang. Hasilnya dapat dilihat dari output yang tersimpan.
 
@@ -157,6 +189,6 @@ Dataset tidak tersedia, jadi notebook dan query tidak bisa dijalankan ulang. Has
 
 ## 👤 Penulis
 
-**Yudha Alfarizi**: [GitHub](GANTI_DENGAN_LINK_GITHUB) · [LinkedIn](GANTI_DENGAN_LINK_LINKEDIN)
+**Yudha Alfarizi**:  [LinkedIn](GANTI_DENGAN_LINK_LINKEDIN)
 
 Penyelenggara bootcamp: **Karirnex**
